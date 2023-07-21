@@ -1,7 +1,7 @@
 # CYCLOBE
 
 client site [cyclobe](https://cyclobe-mtb.web.app)
-server site [cyclobe server](https://intense-headland-66202.herokuapp.com/)
+server site [cyclobe server](https://cyclobe-server.onrender.com)
 
 This is mtb sell website.
 
@@ -10,3 +10,8 @@ This is mtb sell website.
 * people can manage their orders too
 * peaple can review out website form users panel
 * admin manages all orders and products from admin panel
+
+# Important
+
+App must reload 2/3 times to load data from serversite, it is hosted in render.
+<!-- npm run build  then firebase deploy -->

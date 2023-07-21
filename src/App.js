@@ -12,7 +12,8 @@ import axios from 'axios';
 import PlaceOrder from './components/Pages/PlaceOrder/PlaceOrder';
 
 function App() {
-  axios.defaults.baseURL = 'https://intense-headland-66202.herokuapp.com/'
+  // axios.defaults.baseURL = 'https://intense-headland-66202.herokuapp.com/'
+  axios.defaults.baseURL = 'https://cyclobe-server.onrender.com'
   // axios.defaults.baseURL = 'http://localhost:5000/'
   return (
     <AuthProvider>

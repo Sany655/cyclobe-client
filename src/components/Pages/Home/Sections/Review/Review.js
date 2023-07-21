@@ -27,12 +27,13 @@ const responsive = {
 const Review = () => {
     const [review, setReview] = useState([])
     const [loading, setLoading] = useState(true)
-
+    const [exists, setexists] = useState(true)
     useEffect(() => {
         axios(`/review`).then(res => {
             setReview(res.data);
         }).finally(() => {
             setLoading(false)
+            setexists(review?true:false)
         })
     }, [])
 
@@ -40,7 +41,7 @@ const Review = () => {
         <div className='container p-5 pt-0 border my-3 bg-primary' id='review'>
             <h1 className="text-center m-4 text-white">Client Talks</h1>
             {
-                loading ? <Loading /> : (
+                exists & loading ? <Loading /> : (
                     <Carousel responsive={responsive} centerMode={false}>
                         {review.map((revew) => (
                             <div className="card" style={{ width: '95%' }} key={revew._id}>
